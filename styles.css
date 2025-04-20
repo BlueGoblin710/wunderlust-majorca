@@ -1,3 +1,5 @@
+/* Rey Olvera - CSS for the website GIT-414 April 20, 2025*/
+
 /* Reset and Root Variables */
 * {
     box-sizing: border-box;
@@ -24,7 +26,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
-figure, figcaption, footer, hgroup, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -33,21 +35,18 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+   
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
-html, body {
-    line-height: 1;
-    overflow-x: hidden;
-    max-width: 100vw;
-    width: 100%;
+body {
+	line-height: 1;
+    overflow-x: hidden; 
+    
 }
-
 ol, ul {
 	list-style: none;
 }
@@ -76,16 +75,14 @@ body {
     color: var(--dark-gray);
     background-color: var(--white);
     line-height: 1.4;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
-
-/*Overflow Prevention */
+/* General Overflow Prevention */
 main, section, div, header, footer, nav {
     max-width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
 }
-
 /* Skip Link */
 #skip {
     position: absolute;
@@ -115,17 +112,14 @@ header {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: start;
-    min-width: 0; 
 }
-
 /* Logo */
 #logo img {
     max-width: 150px;
     height: auto;
     display: block;
 }
-
-/* h1 */
+/*h1*/
 header h1 {
     font-family: var(--molle);
     font-size: 2rem;
@@ -136,7 +130,6 @@ header h1 {
     grid-column: 1 / 2;
     padding-left: 2rem;
 }
-
 /* p */
 header p {
     font-size: 1rem;
@@ -145,7 +138,6 @@ header p {
     grid-column: 1 / 2;
     padding-left: 2rem;
 }
-
 /* Navigation */
 nav {
     background: var(--yellow);
@@ -154,16 +146,11 @@ nav {
     grid-row: 1 / 2;
     justify-self: end;
     margin-top: 0.5rem;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: visible;
 }
-
 /* Menu toggle */
 #menu-toggle {
     position: relative;
-    display: block;
-    width: auto;
+    display: inline-block; /* Fit to button width */
 }
 
 #toggle {
@@ -174,13 +161,11 @@ label[for="toggle"] {
     display: block;
     background: var(--yellow);
     color: var(--black);
-    padding: 0.3rem 1.5rem;
+    padding: 0.3rem 3rem;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     font-weight: bold;
-    min-width: 80px;
-    z-index: 1100; 
 }
 
 #toggle:not(:checked) ~ ul {
@@ -191,13 +176,10 @@ label[for="toggle"] {
     display: block;
     position: absolute;
     background: var(--dark-gray);
-    width: 100%;
-    max-width: 100vw;
+    width: 100%; 
     left: 0;
-    right: 0;
     top: calc(100% + 0.5rem);
-    z-index: 1000;
-    box-sizing: border-box;
+    z-index: 1000; 
 }
 
 nav ul {
@@ -222,16 +204,17 @@ nav a:hover {
     color: var(--black);
 }
 
+
+
 /* Main */
 main {
     background: var(--white);
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
-
 #intro {
     background: var(--white);
+    
 }
-
 h2 {
     font-family: var(--molle);
     font-size: 1.5rem;
@@ -298,9 +281,9 @@ p {
     display: grid;
     gap: 0.5rem;
     margin: 0.5rem 0;
+    
 }
-
-#testimonials p, q {
+#testimonials p,q{
     font-weight: bold;
 }
 
@@ -336,20 +319,16 @@ p {
     flex-direction: column;
     align-items: center;
     width: 88%;
-    max-width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+    margin: 0;
 }
 
 #plan img {
     max-width: 85%;
-    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     margin-bottom: 45px;
     margin-top: 10px;
-    box-sizing: border-box;
 }
 
 /* About Section */
@@ -372,8 +351,6 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 #testimonials img,
@@ -394,37 +371,33 @@ p {
     display: grid;
     gap: 0.5rem;
     padding: 1rem;
-    max-width: 100%;
-    box-sizing: border-box;
+    
 }
 
 .required {
     color: var(--purple);
     font-weight: bold;
 }
-
 #contact label {
     text-transform: uppercase;
     font-weight: bold;
 }
-
-#contact legend {
-    text-transform: uppercase;
-    font-weight: bold;
+#contact legend{
+        text-transform: uppercase;
+        font-weight: bold;
 }
-
 #contact .form-required {
-    display: inline-block;
-    margin-left: 1rem;
-    text-align: left;
+    display: inline-block; 
+    margin-left: 1rem; 
+    text-align: left; 
     font-weight: normal;
     color: black;
     font-style: italic;
     padding-left: 0;
     font-family: var(--montserrat);
     font-size: medium;
+    
 }
-
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
@@ -436,8 +409,6 @@ p {
     font-size: 1rem;
     color: var(--black);
     font-weight: bold;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 #contact textarea {
@@ -454,7 +425,6 @@ p {
     color: var(--dark-gray);
     background-color: var(--white);
     box-sizing: border-box;
-    max-width: 100%;
 }
 
 #contact select:focus {
@@ -508,7 +478,6 @@ p {
     display: grid;
     gap: 0.5rem;
 }
-
 #contact #selects .custom-select {
     position: relative;
 }
@@ -526,20 +495,19 @@ p {
 }
 
 #contact #selects .custom-select::after {
-    content: '';
+    content: ''; 
     display: block;
     position: absolute;
-    right: 1rem;
+    right: 1rem; 
     top: 50%;
-    width: 0.9rem;
+    width: 0.9rem; 
     height: 0.9rem;
     border: 0.03rem solid purple;
     border-top: none;
     border-left: none;
-    transform: translateY(-70%) rotate(45deg);
+    transform: translateY(-70%) rotate(45deg); 
     pointer-events: none;
 }
-
 footer {
     background: var(--light-gray);
     display: flex;
