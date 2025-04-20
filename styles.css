@@ -138,19 +138,10 @@ header p {
     grid-column: 1 / 2;
     padding-left: 2rem;
 }
-/* Navigation */
-nav {
-    background: var(--yellow);
-    padding: 0.5rem;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    justify-self: end;
-    margin-top: 0.5rem;
-}
-/* Menu toggle */
-#menu-toggle {
+ /* Navigation */
+ #menu-toggle {
     position: relative;
-    display: inline-block; /* Fit to button width */
+    display: inline-block; 
 }
 
 #toggle {
@@ -161,11 +152,12 @@ label[for="toggle"] {
     display: block;
     background: var(--yellow);
     color: var(--black);
-    padding: 0.3rem 3rem;
+    padding: 0.3rem 3rem ;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     font-weight: bold;
+    
 }
 
 #toggle:not(:checked) ~ ul {
@@ -176,10 +168,10 @@ label[for="toggle"] {
     display: block;
     position: absolute;
     background: var(--dark-gray);
-    width: 100%; 
-    left: 0;
-    top: calc(100% + 0.5rem);
-    z-index: 1000; 
+    width: 100%;
+    left: 0; 
+    top: calc(100% + 0.5rem); 
+    z-index: 1000;
 }
 
 nav ul {
@@ -203,9 +195,6 @@ nav a:hover {
     background: var(--teal);
     color: var(--black);
 }
-
-
-
 /* Main */
 main {
     background: var(--white);
