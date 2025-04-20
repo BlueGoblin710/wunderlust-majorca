@@ -103,19 +103,18 @@ body {
 /* Header */
 header {
     background: linear-gradient(to bottom, var(--blue), var(--white));
-    padding: 1rem;
+    padding: 0.5rem;
+    display: grid;
     grid-template-columns: auto 1fr;
     align-items: start;
-    
 }
-#intro {
-    background: var(--white);
-    
-}
+/* Logo */
 #logo img {
     max-width: 150px;
+    height: auto;
+    display: block;
 }
-
+/*h1*/
 header h1 {
     font-family: var(--molle);
     font-size: 2rem;
@@ -126,7 +125,7 @@ header h1 {
     grid-column: 1 / 2;
     padding-left: 2rem;
 }
-
+/* p */
 header p {
     font-size: 1rem;
     margin: 0.5rem 0 0 0;
@@ -135,13 +134,24 @@ header p {
     padding-left: 2rem;
 }
 /* Navigation */
+nav {
+    background: var(--yellow);
+    padding: 0.5rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+    margin-top: 0.5rem;
+}
+/* Menu toggle */
 #menu-toggle {
     position: relative;
-    display: inline-block;
+    display: inline-block; /* Fit to button width */
 }
+
 #toggle {
     display: none;
 }
+
 label[for="toggle"] {
     display: block;
     background: var(--yellow);
@@ -152,25 +162,30 @@ label[for="toggle"] {
     text-align: center;
     font-weight: bold;
 }
+
 #toggle:not(:checked) ~ ul {
     display: none;
 }
+
 #toggle:checked ~ ul {
     display: block;
     position: absolute;
     background: var(--dark-gray);
     width: 100%; 
-    left: 0; 
-    top: calc(100% + 0.5rem); 
-    z-index: 1000;
+    left: 0;
+    top: calc(100% + 0.5rem);
+    z-index: 1000; 
 }
+
 nav ul {
     margin: 0;
     list-style: none;
 }
+
 nav li {
     border-bottom: 1px solid var(--light-gray);
 }
+
 nav a {
     display: block;
     color: var(--white);
@@ -178,6 +193,7 @@ nav a {
     font-size: 1rem;
     padding: 0.5rem 1rem;
 }
+
 nav a:hover {
     background: var(--teal);
     color: var(--black);
@@ -511,12 +527,14 @@ footer a:hover {
 /* Extra Small - Mobile  */
    @media (min-width: 300px) and (max-width: 599px) {
 
+    /* Header */
     header {
         background: linear-gradient(to bottom, var(--blue), var(--white));
         padding: 1rem;
         grid-template-columns: auto 1fr;
         align-items: start;
-
+        width: 100%;
+        box-sizing: border-box;
     }
     #intro {
         background: var(--white);
@@ -534,7 +552,7 @@ footer a:hover {
         text-shadow: 2px 2px 2px var(--dark-gray);
         text-align: left;
         grid-column: 1 / 2;
-        padding-left: 2rem;
+        padding-left: 0.5rem;
     }
     
     header p {
@@ -542,45 +560,54 @@ footer a:hover {
         margin: 0.5rem 0 0 0;
         text-align: left;
         grid-column: 1 / 2;
-        padding-left: 2rem;
+        padding-left: 0.5rem; 
     }
+
     /* Navigation */
     #menu-toggle {
         position: relative;
-        display: inline-block;
+        display: inline-block; 
     }
+    
     #toggle {
         display: none;
     }
+    
     label[for="toggle"] {
         display: block;
         background: var(--yellow);
         color: var(--black);
-        padding: 0.3rem 3rem;
+        padding: 0.3rem 3rem ;
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
         font-weight: bold;
+        
     }
+    
     #toggle:not(:checked) ~ ul {
         display: none;
     }
+    
     #toggle:checked ~ ul {
         display: block;
         position: absolute;
         background: var(--dark-gray);
-        width: 100%; 
+        width: 100%;
         left: 0; 
         top: calc(100% + 0.5rem); 
         z-index: 1000;
     }
+    
     nav ul {
         margin: 0;
         list-style: none;
     }
+    
     nav li {
         border-bottom: 1px solid var(--light-gray);
     }
+    
     nav a {
         display: block;
         color: var(--white);
@@ -588,6 +615,7 @@ footer a:hover {
         font-size: 1rem;
         padding: 0.5rem 1rem;
     }
+    
     nav a:hover {
         background: var(--teal);
         color: var(--black);
