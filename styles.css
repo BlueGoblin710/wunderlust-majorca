@@ -78,7 +78,7 @@ body {
     overflow-x: hidden; 
 }
 /* General Overflow Prevention */
-main, section, div, header, footer, nav {
+main, section, div, header, footer {
     max-width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
