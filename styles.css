@@ -42,6 +42,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html, body {
+    overflow-x: hidden;
+}
 body {
 	line-height: 1;
     overflow-x: hidden; 
